@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados com JS</title>  
+<style>
+h1,h2{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+body{font: 12pt arial;text-align: center;background-image: url(sorteio_fundo-1536x864.png); background-size: 100%;}
+button{font-size: 12pt;padding: 30px; border-radius: 50%;color: rgb(0, 0, 0); background-color: rgb(255, 196, 0);border:3px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+p{font-size: 30px;font-family: 'Times New Roman', Times, serif;}
+</style>
+</head>
+<body>
+
+    <h1>Sorteio de Prêmios</h1>
+    <h2>Escolha o seu:</h2>
+    
+    <button onclick="inicio()">1°Prêmio</button>
+    <button onclick="meio()">2°Prêmio</button>
+    <button onclick="fim()">3°Prêmio</button>
+
+    <section id="resultado"></section>
+    <script>
+    
+function inicio() {
+    let res = window.document.getElementById('resultado');
+res.innerHTML = `<p> Seu Prêmio é: 20 mil reais</p>`    
+}
+
+function meio(){
+    let res = window.document.getElementById('resultado');
+res.innerHTML = `<p> Seu Prêmio é: 56 mil reais </p>`
+    }
+
+function fim(){
+    let res = window.document.getElementById('resultado');
+res.innerHTML = `<p> Seu Prêmio é: 267 mil reais  </p>` 
+    }
+
+</script>     
+
+</body>
+</html>
