@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        *{font-family: 'Times New Roman', Times, serif; color: rgb(255, 255, 255);}
+        body{font: 'Times New Roman', Times, serif; background-color: rgb(255, 255, 255);}
+        h1{position: absolute; left: 40%;color: rgb(29, 231, 2);font-size: 40px;}
+        h2{position: absolute; left: 40%; top: 60%; color: rgb(255, 0, 0);}
+        p{position: absolute; left: 60%; top: 45%; color: rgb(255, 0, 0);font-size: 30px;}
+        button{ font-size: 20pt; padding: 30px; color: rgb(0, 0, 0);border: none; border-radius: 50%;}
+    </style>
+    
+
+
+</head>
+<body>
+    <h1>CÁLCULO DE FATURA</h1>
+    <button onclick="calcular()">Clique aqui para calcular sua fatura</button>
+    <section id="res">
+        <h2><p>RESULTADO</p></h2>
+        </section>
+
+        <script>
+            //O que fica fora executa sempre que carregar o site
+            window.alert('Seja Bem-Vindo ao seu site!  :) ')
+            //CALCULAR só quando o botao for pressionado
+            function calcular() {
+                let n1 = Number(window.prompt('Digite o valor de sua fatura:'))
+                let res = document.querySelector('section#res')
+                const porcentagem = n1 * 0.1;
+                const porcentagem1 = n1 * 0.05;
+                const porcentagem2 = n1 * 0.2;
+                const porcentagem3 = n1 * 0.02;
+
+                res.innerHTML = `<p> FATURA=R$${n1}<br><br>Dinheiro/cheque 10%OFF R$${porcentagem}   TOTAL:${n1-porcentagem}<br><br>Crédito/á vista 5%OFF R$${porcentagem1}   TOTAL:${n1-porcentagem1}<br><br>Crédito2X +5% R$${porcentagem}   TOTAL:${n1+porcentagem1}<br><br>Crédito3X +20% R$${porcentagem2}   TOTAL:${n1+porcentagem2}<br><br>Vencimento +2%/dia R$${porcentagem3}   TOTAL:${n1+porcentagem3} </p>`    
+            
+            
+            }
+        </script>
+    </body>
+</html>
