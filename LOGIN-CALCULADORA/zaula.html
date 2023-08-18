@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        body{font: 'Times New Roman', Times, serif;}
+        button{ font-size: 12pt; padding: 30px;}
+    </style>
+    
+
+
+</head>
+<body>
+    <h1>Trabalhando com Números</h1>
+    <button onclick="calcular()">Clique aqui para calcular</button>
+    <section id="res">
+        <p>O resultado vem aqui</p>
+        </section>
+
+        <script>
+            //O que fica fora executa sempre que carregar o site
+            window.alert('Seja Bem-Vindo ao meu site!')
+            //CALCULAR só quando o botao for pressionado
+            function calcular() {
+                let n1 = Number(window.prompt('Digite um número:'))
+                let n2 = Number(window.prompt('Digite outo número:'))
+                let n3 = Number(window.prompt('Digite outro número:'))
+                let n4 = Number(window.prompt('Digite outro número:'))
+                let res = document.querySelector('section#res')
+
+
+                res.innerHTML = `<p>A soma dos números é: ${n1+n2+n3+n4}/A subtração dos números é: ${n1+n2+n3+n4}/A divisão dos números é: ${n1+n2+n3+n4/4}/A mutiplicação dos números é:${n1*n2*n3*n4} </p>`    
+            }
+        </script>
+    </body>
+</html>
