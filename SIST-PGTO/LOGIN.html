@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tela de Boas-Vindas</title>
+<style>
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  .welcome-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .hidden {
+    display: none;
+  }
+  button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+  <div class="welcome-container">
+  <h2>Bem-vindo ao nosso site!</h2>
+  <p>Clique no botão abaixo para fazer login:</p>
+  
+  <button id="enterButton">Entrar</button>
+  
+  <div id="userInfo" class="hidden">
+    <h3>Informações do Usuário</h3>
+    
+    <p><strong>Nome:</strong> <span id="userName"></span></p>
+    <p><strong>Idade:</strong> <span id="userAge"></span></p>
+    <p><strong>Telefone:</strong> <span id="userPhone"></span></p>
+    <p><strong>Endereco:</strong> <span id="userend"></span></p>
+    <p><strong>CEP:</strong> <span id="usercep"></span></p>
+    <p><strong>CPF:</strong> <span id="usercpf"></span></p>
+    
+    <p>Você pode acessar o site!</p>
+    <p>Clique no botão para ser direcionado para contabilidade de sua fatura </p>
+    <a href="zaula.html"><button id="enterButton">Contabilidade</button></a>
+  
+  </div>
+  </div>
+
+<script>
+  const enterButton = document.getElementById('enterButton');
+  const userInfo = document.getElementById('userInfo');
+  const userNameSpan = document.getElementById('userName');
+  const userAgeSpan = document.getElementById('userAge');
+  const userPhoneSpan = document.getElementById('userPhone');
+  const userendSpan = document.getElementById('userend');
+  const usercepSpan = document.getElementById('usercep');
+  const usercpfSpan = document.getElementById('usercpf');
+
+  enterButton.addEventListener('click', () => {
+    const name = prompt('Digite seu nome:');
+    const age = prompt('Digite sua idade:');
+    const phone = prompt('Digite seu telefone:');
+    const Endereco = prompt('Digite seu endereço:');
+    const CEP = prompt('Digite seu CEP:');
+    const CPF = prompt('Digite seu CPF:');
+
+    if (name && age && phone && Endereco && CEP && CPF) {
+  userNameSpan.textContent = name;
+  userAgeSpan.textContent = age;
+  userPhoneSpan.textContent = phone;
+  userendSpan.textContent = Endereco; // Corrigido
+  usercepSpan.textContent = CEP; // Corrigido
+  usercpfSpan.textContent = CPF; // Corrigido
+
+  userInfo.classList.remove('hidden');
+  enterButton.disabled = true;
+} else {
+  alert('Por favor, preencha todas as informações.');
+}
+});
+</script>
+</body>
+</html>
