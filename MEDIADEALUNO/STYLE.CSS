@@ -1,0 +1,17 @@
+*{
+    background-color: green;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 35px;
+    text-align: center;
+}
+
+button{
+ border-radius: 15px;
+ font-size: 18px;
+ border: solid 1px #fff;
+}

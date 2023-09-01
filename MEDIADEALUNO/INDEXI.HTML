@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLE.CSS">
+    <title>CALCULADORA</title>
+</head>
+<body>
+ <h1>JavaScript Externo</h1>
+ 
+ <button onclick="acao1()">1º function</button>
+ <button onclick="acao2()">2º function</button>
+ <button onclick="acao3()">3º function</button>
+ <button onclick="acao4()">4º function</button>
+<section id="saida">
+<p>Aqui aparecerão seus registros</p>
+</section>
+
+
+
+<script>
+
+let resp = window.document.getElementById('saida')
+
+function acao1() {
+    resp.innerHTML += '<p>Executou a 1ª function</p>'
+}
+
+function acao2() {
+    resp.innerHTML += '<p>Executou a 2ª function</p>'
+}
+
+function acao3() {
+    resp.innerHTML += '<p>Executou a 3ª function</p>'
+}
+
+function acao4() {
+    resp.innerHTML += '<p>Executou a 4ª function</p>'
+}
+</script>
+</body>
+</html>

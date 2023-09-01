@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLEII.CSS">
+    <title>EXPOSIÇÃO DE AÇÃO</title>
+</head>
+<body>
+ <h1>Calcule sua Nota</h1>
+ 
+ <button onclick="media()">Calcular</button>
+
+<section id="situacao">
+<p>aqui aparecerá sua média...</p>
+</section>
+
+<script>
+
+function media() {
+    let nome = window.prompt('Digite seu nome:');
+    let first_number = Number(window.prompt('Digite a primeira nota'));
+    let second_number = Number(window.prompt('Digite a segunda nota'));
+    let third_number = Number(window.prompt('Digite a terceira nota'));
+    let fourth_number = Number(window.prompt('Digite a terceira nota'));
+
+    let med = (first_number + second_number + third_number + fourth_number) / 4;
+    
+    let mensagem;
+    if (med >= 6) {
+        mensagem = 'APROVADO';
+    } 
+    else if (med >= 5.1) {
+        mensagem = 'RECUPERAÇÃO';
+    } 
+    else {
+        mensagem = 'REPROVADO';
+    }
+
+    let res = document.getElementById('situacao');
+    res.innerHTML = `<p>Calculando sua média final, caro(a) <mark>${nome}</mark>.</p>`;
+    res.innerHTML += `<p>As notas obtidas foram: <mark>${first_number}, ${second_number}, ${third_number}, ${fourth_number}</mark></p>`;
+    res.innerHTML += `<p>A média final é: <mark>${med.toFixed(2)}</mark></p>`;
+    res.innerHTML += `<p>Seu resultado final é: <mark>${mensagem}</mark></p>`;
+}
+
+</script>
+
+</body>
+</html>
