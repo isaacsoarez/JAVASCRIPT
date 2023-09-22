@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Calculadora</title>
+
+    <style>
+    
+       @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+       *{font-family: 'Righteous', cursive;; color: rgb(255, 255, 255);}
+        body{font: 'Times New Roman', Times, serif; background-image: url(bbb.jpg);background-size: auto;}
+        body image{width: 100px; height: 100px;}
+        h1{position: absolute; left: 40%;color: rgb(255, 255, 255);font-size: 40px;}
+        h2{position: absolute; left: 10%; top: 40%; color: rgb(255, 255, 255);}
+        p{position: absolute; left: 10%; top: 30%; color: rgb(255, 255, 255);font-size: 30px;}
+        button{ font-size: 15pt; padding: 30px; color: rgb(0, 0, 0);border: 2px solid black; border-radius: 10px;padding: 10px;}
+        .ab{text-align: left; padding: 30px;}
+    </style>
+    
+
+
+</head>
+<body>
+    <h1><b>CALCULADORA DO ALUNO</b></h1>
+    <div class="ab">
+    <button onclick="calcular()">CALCULAR SOMA</button><br>
+    <button onclick="calcular2()">CALCULAR SUBTRAÇÃO</button><br>
+    <button onclick="calcular3()">CALCULAR MUTIPLICAÇÃO</button><br>
+    <button onclick="calcular4()">CALCULAR DIVISÃO</button>
+    </div>
+    <section id="res">
+        <h2><p>RESULTADO:</p></h2>
+        </section>
+
+        <script>
+            //CALCULAR só quando o botao for pressionado
+            function calcular() {
+                let n1 = Number(window.prompt('Digite o 1º valor'))
+                let n2 = Number(window.prompt('Digite o 2º valor'))
+                let res = document.querySelector('section#res')
+                const calc1 = n1 + n2;
+                
+                let tipo
+                    if(calc1 % 2 == 0){
+                    tipo = '<strong>PAR</strong>'
+                    }
+                    else{
+                    tipo = '<strong>IMPAR</strong>'
+                    }
+
+
+                res.innerHTML = `<p> Os valores são <b>${n1}</b> e <b>${n2}</b><br><br>Resultado:<b>${calc1}=${tipo}</b></p>`            
+            }
+            
+            function calcular2() {
+                let n1 = Number(window.prompt('Digite o 1º valor'))
+                let n2 = Number(window.prompt('Digite o 2º valor'))
+                let res = document.querySelector('section#res')
+                const calc2 = n1 - n2;
+                
+                let tipo
+                    if(calc2 % 2 == 0){
+                    tipo = '<strong>PAR</strong>'
+                    }
+                    else{
+                    tipo = '<strong>IMPAR</strong>'
+                    }
+
+
+                res.innerHTML = `<p> Os valores são <b>${n1}</b> e <b>${n2}</b><br><br>Resultado:<b>${calc2}=${tipo}</b></p>`
+            }
+
+            function calcular3() {
+                let n1 = Number(window.prompt('Digite o 1º valor'))
+                let n2 = Number(window.prompt('Digite o 2º valor'))
+                let res = document.querySelector('section#res')
+                const calc3 = n1 * n2;
+                
+                let tipo
+                    if(calc3 % 2 == 0){
+                    tipo = '<strong>PAR</strong>'
+                    }
+                    else{
+                    tipo = '<strong>IMPAR</strong>'
+                    }
+
+
+                res.innerHTML = `<p> Os valores são <b>${n1}</b> e <b>${n2}</b><br><br>Resultado:<b>${calc3}=${tipo}</b></p>`
+            }
+
+            function calcular4() {
+                let n1 = Number(window.prompt('Digite o 1º valor'))
+                let n2 = Number(window.prompt('Digite o 2º valor'))
+                let res = document.querySelector('section#res')
+                const calc4 = n1 / n2;
+                
+                let tipo
+                    if(calc4 % 2 == 0){
+                    tipo = '<strong>PAR</strong>'
+                    }
+                    else{
+                    tipo = '<strong>IMPAR</strong>'
+                    }
+
+
+                res.innerHTML = `<p> Os valores são <b>${n1}</b> e <b>${n2}</b><br><br>Resultado:<b>${calc4.toFixed(2)}=${tipo}</b></p>`
+            }
+        
+        </script>
+    </body>
+</html>

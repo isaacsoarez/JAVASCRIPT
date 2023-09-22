@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="imparpar.css">
+    <title>Ímpar e Par</title>
+
+</head>
+<body>
+
+<center><div class="ab">
+    
+    <h1><b>Ímpar ou Par</b></h1>
+    <button onclick="teste()">Clique para ver o resultado</button>
+    <section id="result"> O resultado aparecerá aqui...</section>
+    
+</div></center>
+
+
+
+<script>function teste(){
+let num = Number(window.prompt('Digite um número'))
+let num1 = Number(window.prompt('Digite outro número'))
+
+
+let tipo
+    if(num % 2 == 0){
+    tipo = '<strong>PAR</strong>'
+    }
+    else{
+    tipo = '<strong>IMPAR</strong>'
+    }
+
+let tipo1
+    if(num1 % 2 == 0){
+    tipo1 = '<strong>PAR</strong>'
+    }
+    else{
+    tipo1 = '<strong>IMPAR</strong>'
+    }    
+
+        
+let res = document.querySelector('section#result')
+res.innerHTML = `<p>O número ${num} é ${tipo} e o ${num1} é ${tipo1}</p>`
+    
+}
+</script>
+
+</body>
+</html>
