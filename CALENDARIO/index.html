@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calendary JS</title>
+</head>
+<body>
+    <section class="container">
+        <div class="calendar">
+           
+            <div class="days">
+                <div class="wrapper">
+                    <div class="month">
+                        <div class="prev" onclick="moveDate('prev')">
+                            <span>&#10094</span>
+                        </div>
+                        <div class="title">
+                            <h2 id="month">June</h2>
+                            <p id="date_str"></p>
+                        </div>
+                        <div class="next" onclick="moveDate('next')">
+                            <span>&#10095</span>
+                        </div>
+                    </div>
+                    <div class="weekends">
+                        <div>Dom</div>
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sab</div>
+                    </div>
+                    <div class="days-year">
+                        
+                    </div>
+                </div>
+            </div>
+                <div class="bloco">
+                    <button class="addButton"><ion-icon name="add-outline" class="plus"></ion-icon></button>
+                </div>
+                <div class="anotacoes">
+                    <button class="btn" id="mostrarHora">Mostrar Hora</button>
+                    <p id="horaAtual"></p> 
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
