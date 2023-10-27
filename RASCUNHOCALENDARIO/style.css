@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{font-family: 'Bebas Neue', sans-serif;
+}
+
+
+body{background-image: url(img/calend.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+h1{color: #fff;
+}
+
+p{color: #fff;
+}
